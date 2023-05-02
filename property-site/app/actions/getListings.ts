@@ -9,7 +9,12 @@ export default async function getListings() {
 
         })
 
-        return listings
+        const safeListings = listings.map((listing: any) =>({
+            ...listing,
+            createAt: listing.createAt.toISOString()
+        }))
+        
+        return safeListings
     } catch (err: any) {
         throw new Error(err)
     }
