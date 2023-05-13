@@ -10,6 +10,8 @@ import { SafeListing } from './types'
 
 const inter = Inter({ subsets: ['latin'] })
 
+export const dynamic = 'force-dynamic';
+
 interface HomeProps {
   searchParams: IListingsParams
 }
